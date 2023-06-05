@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happi Sukkin</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-image: url("https://images.unsplash.com/photo-1543157145-f78c636d023d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    #header {
+      background: #f6f7f1;
+    }
+
+    .logo {
+      text-align: left;
+      line-height: 50px;
+      float: left;
+    }
+
+    .logo a {
+      text-decoration: none;
+      font-size: 24px;
+      font-family: 'Noto Serif';
+      color:#700b35;
+      letter-spacing: 4px;
+    }
+
+    .navigation {
+      text-align: right;
+      padding: 11px;
+      margin-top: 20px;
+    }
+    .navigation .icon {
+      display: none;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display:inline-flex;
+    
+      justify-content: right;
+    }
+    nav li {
+      padding: 10px;
+      margin-bottom: 7px;
+
+      color: #7c2247;
+     
+    }
+
+    nav li:hover {
+      background-color: #ffff;
+    }
+
+    nav a {
+      text-decoration: none;
+      color:#700b35;
+      font-size: 14px;
+    }
+
+    nav a:visited {
+      color:#700b35
+    }
+    .navigation .icon {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+      }.navigation {
+        text-align: center;
+      }
+
+      .navigation .icon {
+        display: inline-block;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      nav.responsive ul {
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav.responsive li {
+        margin-bottom: 5px;
+      }}
+
+    main {
+      padding: 20px;
+      display: grid;
+      margin: 0;
+      padding: 0 24px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: pan 6s infinite alternate linear;
+    }
+
+    .form-title h4 {
+      margin: 0 0 12px;
+      font-size: 36px;
+      font-weight: 600;
+    }
+
+    .form-title h5 {
+      color: #0e0d0a;
+      margin: 0 0 30px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .form {
+      display: grid;
+      gap: 16px;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .form_group {
+      position: relative;
+    }
+
+    .form_icon {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #c9d38e;
+    }
+
+    .form_input {
+      width: 100%;
+      height: 40px;
+      padding-left: 30px;
+      border: 0px solid #ffffff;
+      border-radius: 8px;
+    }
+
+    .bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #ffffff;
+      transition: width 0.3s;
+      color: #c9d38e;
+    }
+
+    .form_input:focus + .bar {
+      width: 100%;
+    }
+
+    .form_button {
+      width: 100%;
+      height: 40px;
+      background-color: #700b35;
+      color: #c0ae11;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .form_switch {
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .form_switch a {
+      color: #c0ae11;
+    }
+
+    footer {
+      align-items: center;
+      padding: 20px;
+      background-color: #f6f7f1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="header">
+      <div class="container">
+        <div class="logo">
+          <a href="#">Happi Sukkin</a>
+        </div>
+        <nav class="navigation">
+          <ul id="myTopnav">
+            <li><a href="file:///C:/Users/Zinatou%20Dini/Downloads/account.html"><i class="fa fa-fw fa-user"></i></a></li>
+            <li><a href="file:///C:/Users/Zinatou%20Dini/contact%20us.html"><i class="fa fa-fw fa-envelope"></i></a></li>
+            <li><a href="#"><i class="fa fa-fw fa-search"></i></a></li>
+            <li> <a href="file:///C:/Users/Zinatou%20Dini/blog.html"> <i class="fas fa-pencil-alt"></i></a> </li>
+            <li> <a href="#"> <i class="fas fa-info-circle"></i></a> </li>
+            <li> <a href="#"><i class="fas fa-shopping-cart"></i></a> </li>
+            <li class="icon" onclick="toggleNav()">
+              <i class="fas fa-bars"></i>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <script>
+      function toggleNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "navigation") {
+          x.className += " responsive";
+        } else {
+          x.className = "navigation";
+        }
+      }
+    </script>
+  </header>
+
+  <main>
+      <div class="container">
+        <div class="form-title">
+          <h4>Welcome</h4>
+          <h5><br>Create Your Account</br></h5>
+      <form class="form">
+        <div class="form_group">
+          <i class="ri-user-line form_icon"></i>
+          <input type="text" placeholder="Name" required class="form_input">
+          <span class="bar"></span>
+        </div>
+        <div class="form_group">
+          <i class="ri-user-line form_icon"></i>
+          <input type="text" placeholder="E-mail" required class="form_input">
+          <span class="bar"></span>
+        </div>
+        <div class="form_group">
+          <i class="ri-lock-line form_icon"></i>
+          <input type="password" placeholder="Password" required class="form_input">
+          <span class="bar"></span>
+        </div>
+        <div class="form_group">
+          <i class="ri-user-line form_icon"></i>
+          <input type="password" placeholder="Confirm Password" required class="form_input">
+          <span class="bar"></span>
+        </div>
+        <button type="submit" class="form_button">Sign up</button>
+        <p class="form_switch">
+          Already have an account? <a href="file:///C:/Users/Zinatou%20Dini/Downloads/account.html">Log in</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Happi Sukkin. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="https://kit.fontawesome.com/5811f65b9b.js" crossorigin="anonymous"></script>
+</body>
+</html>
